@@ -44,19 +44,41 @@
 //   return elapsedTime;
 // }
 
+// function countTime(leds) {
+//   let elapsedTime = 0;
+//   let ledsState = [...leds];
+//   while (ledsState.includes(0)) {
+//     const newLedState = ledsState.map((item, index) => {
+//       if (item) return item;
+//       const pos = index === 0 ? leds.length - 1 : index - 1;
+//       const leftLight = ledsState[pos];
+//       if (leftLight) return 1;
+//       return 0;
+//     });
+//     elapsedTime += 7;
+//     ledsState = [...newLedState];
+//   }
+
+//   return elapsedTime;
+// }
+
 function countTime(leds) {
   let elapsedTime = 0;
   let ledsState = [...leds];
-  while (ledsState.includes(0)) {
-    const newLedState = ledsState.map((item, index) => {
-      if (item) return item;
-      const pos = index === 0 ? leds.length - 1 : index - 1;
-      const leftLight = ledsState[pos];
-      if (leftLight) return 1;
-      return 0;
+
+  const updateLedsState = (ledsState) => {
+    return ledsState.map((item, index) => {
+      return item
+        ? item
+        : ledsState[index === 0 ? leds.length - 1 : index - 1]
+        ? 1
+        : 0;
     });
+  }
+
+  while (ledsState.includes(0)) {
+    ledsState = updateLedsState(ledsState);
     elapsedTime += 7;
-    ledsState = [...newLedState];
   }
 
   return elapsedTime;
