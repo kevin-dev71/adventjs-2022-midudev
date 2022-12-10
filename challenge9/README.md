@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/39138605/206868192-66ef79b5-711e-405a-834f-bbe0a8c80d2c.png)
+
+
 A company that manufactures Christmas lights has asked us to help them.
 
 They have led strips that are like an Array. Each position is a led and can be on (1) or off (0).
