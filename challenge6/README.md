@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/39138605/206835825-8a70aabd-e582-4780-9de3-91acc3e0fc97.png)
+
+
 A couple of Christmas enthusiasts have created a Christmas decoration company. The first decoration they want to manufacture is a cube that is placed on the trees.
 
 The problem is that they have to program the machine and they don't know how to do it. They have asked us for help to achieve it.
