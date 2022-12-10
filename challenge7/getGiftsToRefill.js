@@ -17,7 +17,12 @@ function getGiftsToRefill(a1, a2, a3) {
   store2.forEach(addToInventory);
   store3.forEach(addToInventory);
 
-  const giftArray = Object.keys(giftCount);
+  // const giftArray = Object.keys(giftCount);
+  const giftArray = [];
 
-  return giftArray.filter(needToBeReplenished);
+  for (const gift in giftCount) {
+    if (needToBeReplenished(gift)) giftArray.push(gift);
+  }
+
+  return giftArray;
 }
